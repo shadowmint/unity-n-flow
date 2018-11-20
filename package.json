@@ -1,0 +1,24 @@
+{
+  "name": "unity-n-flow",
+  "version": "0.0.1",
+  "description": "Flow UI",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowmint/unity-n-flow.git"
+  },
+  "files": [
+    "index.js",
+    "scripts",
+    "src"
+  ],
+  "author": "douglas.linder@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shadowmint/unity-n-flow/issues"
+  },
+  "homepage": "https://github.com/shadowmint/unity-n-flow",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js"
+  }
+}
