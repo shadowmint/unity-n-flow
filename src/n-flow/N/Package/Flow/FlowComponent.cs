@@ -37,7 +37,7 @@ namespace N.Package.Flow
       return true;
     }
 
-    public virtual void OnComponentDidMount(FlowComponentProperties props)
+    public virtual void OnComponentDidMount(FlowComponentProperties props, bool justMounted)
     {
       Properties = props as TProps;
       if (Properties == null)

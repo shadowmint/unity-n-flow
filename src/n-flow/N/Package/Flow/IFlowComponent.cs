@@ -8,7 +8,7 @@ namespace N.Package.Flow
     FlowComponentState State { get; }
     System.Type PropertiesType { get; }
     bool ComponentShouldUpdate();
-    void OnComponentDidMount(FlowComponentProperties properties);
+    void OnComponentDidMount(FlowComponentProperties properties, bool justMounted);
     void OnComponentWillUnmount();
     void OnComponentRender();
   }

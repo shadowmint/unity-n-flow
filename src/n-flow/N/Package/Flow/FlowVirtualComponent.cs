@@ -53,14 +53,16 @@ namespace N.Package.Flow
 
     private void RequireManifestInstance()
     {
+      var didCreate = false;
       if (!_manifest)
       {
         _manifest = true;
         _dispatcher?.CreateComponentInstance(this, _parentProvider);
+        didCreate = true;
       }
 
       var props = _dispatcher?.GetProperties(this);
-      _component.OnComponentDidMount(props);
+      _component.OnComponentDidMount(props, didCreate);
     }
 
     private void RenderComponentLayout(int depth)

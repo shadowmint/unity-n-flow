@@ -21,13 +21,16 @@ namespace N.Package.Flow.Samples.Components
       yield break;
     }
 
-    public override void OnComponentDidMount(FlowComponentProperties props)
+    public override void OnComponentDidMount(FlowComponentProperties props, bool justMounted)
     {
-      base.OnComponentDidMount(props);
-      Properties.OnTick = () =>
+      base.OnComponentDidMount(props, justMounted);
+      if (justMounted)
       {
-        State.OnTick(DateTime.Now);      
-      };
+        Properties.OnTick = () =>
+        {
+          State.OnTick(DateTime.Now);      
+        };
+      }
     }
 
     public override void OnComponentWillUnmount()
